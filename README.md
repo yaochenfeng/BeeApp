@@ -29,14 +29,15 @@ gem install cocoapods
 brew install carthage
 ```
 
-## 依赖安装(可选)
+## 依赖安装(可选对应的管理工具)
 
 pod安装
 > pod install
+
 carthage安装依赖
 > carthage bootstrap --no-use-binaries --platform iOS
 
-更新
+carthag更新
 > carthage update --platform iOS
 也可以通过build
 > carthage build --platform iOS
