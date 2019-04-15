@@ -24,7 +24,7 @@ def swift_pods
 end
 def weex_pods
     #视图布局
-#    pod 'WeexPluginJyc', :configurations => ['Debug'], :git => 'https://github.com/jyc9/weex-jyc.git', :branch => 'develop'
+    pod 'WeexPluginJyc', :configurations => ['Debug'], :git => 'https://github.com/jyc9/weex-plugin-jyc.git', :branch => 'develop'
 end
 
 

@@ -3,7 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>url_action_request_middleware_list</key>
-	<array/>
+	<array>
+		<dict>
+			<key>middleware</key>
+			<string>#BHWeexURLActionRequestMiddleware</string>
+			<key>desc</key>
+			<string>weex 处理middle</string>
+		</dict>
+	</array>
 	<key>url_action_response_middleware_list</key>
 	<array>
 		<dict>
