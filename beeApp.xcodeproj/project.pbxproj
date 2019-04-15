@@ -13,6 +13,11 @@
 		8F14FA3722641D91001CB214 /* BeeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA3622641D91001CB214 /* BeeUtils.m */; };
 		8F14FA47226425C8001CB214 /* R-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA45226425C8001CB214 /* R-images.swift */; };
 		8F14FA48226425C8001CB214 /* R-Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA46226425C8001CB214 /* R-Scenes.swift */; };
+		8F14FA4B226426D4001CB214 /* ExceptionResponseMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA4A226426D4001CB214 /* ExceptionResponseMiddleware.swift */; };
+		8F14FA4D22642802001CB214 /* MainConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F14FA4C22642802001CB214 /* MainConfig.plist */; };
+		8F14FA51226428D7001CB214 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA50226428D7001CB214 /* WebViewController.swift */; };
+		8F14FA53226428EB001CB214 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA52226428EB001CB214 /* BaseViewController.swift */; };
+		8F14FA552264294A001CB214 /* extension+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA542264294A001CB214 /* extension+UIKit.swift */; };
 		8F76D91022606B03000CA6F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76D90F22606B03000CA6F2 /* AppDelegate.swift */; };
 		8F76D91322606B0C000CA6F2 /* BeeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76D91222606B0C000CA6F2 /* BeeAppTests.swift */; };
 		8F76D91A22606B19000CA6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F76D91522606B19000CA6F2 /* Assets.xcassets */; };
@@ -39,6 +44,11 @@
 		8F14FA3922641DE3001CB214 /* oc-swift-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "oc-swift-header.h"; sourceTree = "<group>"; };
 		8F14FA45226425C8001CB214 /* R-images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "R-images.swift"; sourceTree = "<group>"; };
 		8F14FA46226425C8001CB214 /* R-Scenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "R-Scenes.swift"; sourceTree = "<group>"; };
+		8F14FA4A226426D4001CB214 /* ExceptionResponseMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionResponseMiddleware.swift; sourceTree = "<group>"; };
+		8F14FA4C22642802001CB214 /* MainConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainConfig.plist; sourceTree = "<group>"; };
+		8F14FA50226428D7001CB214 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		8F14FA52226428EB001CB214 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8F14FA542264294A001CB214 /* extension+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "extension+UIKit.swift"; sourceTree = "<group>"; };
 		8F76D8EB226068BE000CA6F2 /* beeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F76D8FF226068C1000CA6F2 /* beeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F76D90F22606B03000CA6F2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +114,7 @@
 		8F14FA3B226422BD001CB214 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				8F14FA542264294A001CB214 /* extension+UIKit.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -115,6 +126,31 @@
 				8F14FA46226425C8001CB214 /* R-Scenes.swift */,
 			);
 			path = generated;
+			sourceTree = "<group>";
+		};
+		8F14FA492264269B001CB214 /* url_resolver */ = {
+			isa = PBXGroup;
+			children = (
+				8F14FA4A226426D4001CB214 /* ExceptionResponseMiddleware.swift */,
+			);
+			path = url_resolver;
+			sourceTree = "<group>";
+		};
+		8F14FA4E226428B0001CB214 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				8F14FA4F226428B6001CB214 /* controller */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		8F14FA4F226428B6001CB214 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F14FA52226428EB001CB214 /* BaseViewController.swift */,
+				8F14FA50226428D7001CB214 /* WebViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		8F76D8E2226068BE000CA6F2 = {
@@ -141,11 +177,13 @@
 		8F76D90E22606B03000CA6F2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8F14FA3C22642389001CB214 /* generated */,
-				8F14FA3B226422BD001CB214 /* extension */,
 				8F14FA3122641D43001CB214 /* Constants.swift */,
 				8F76D90F22606B03000CA6F2 /* AppDelegate.swift */,
+				8F14FA4E226428B0001CB214 /* base */,
 				8F14FA3322641D70001CB214 /* objc */,
+				8F14FA492264269B001CB214 /* url_resolver */,
+				8F14FA3B226422BD001CB214 /* extension */,
+				8F14FA3C22642389001CB214 /* generated */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -164,6 +202,7 @@
 				8F76D91522606B19000CA6F2 /* Assets.xcassets */,
 				8F76D91622606B19000CA6F2 /* LaunchScreen.storyboard */,
 				8F76D91822606B19000CA6F2 /* Main.storyboard */,
+				8F14FA4C22642802001CB214 /* MainConfig.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -267,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F76D91C22606B19000CA6F2 /* Main.storyboard in Resources */,
+				8F14FA4D22642802001CB214 /* MainConfig.plist in Resources */,
 				8F76D91A22606B19000CA6F2 /* Assets.xcassets in Resources */,
 				8F76D91B22606B19000CA6F2 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -403,7 +443,11 @@
 			files = (
 				8F76D91022606B03000CA6F2 /* AppDelegate.swift in Sources */,
 				8F14FA3222641D43001CB214 /* Constants.swift in Sources */,
+				8F14FA4B226426D4001CB214 /* ExceptionResponseMiddleware.swift in Sources */,
 				8F14FA47226425C8001CB214 /* R-images.swift in Sources */,
+				8F14FA51226428D7001CB214 /* WebViewController.swift in Sources */,
+				8F14FA53226428EB001CB214 /* BaseViewController.swift in Sources */,
+				8F14FA552264294A001CB214 /* extension+UIKit.swift in Sources */,
 				8F14FA3722641D91001CB214 /* BeeUtils.m in Sources */,
 				8F14FA48226425C8001CB214 /* R-Scenes.swift in Sources */,
 			);
