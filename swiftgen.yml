@@ -1,0 +1,13 @@
+
+xcassets:
+  inputs:
+    - Resources/Assets.xcassets
+  outputs:
+    - templateName: swift4
+      output: Sources/Generated/R-images.swift
+
+ib:
+  inputs: Resources/
+  outputs:
+    - templateName: scenes-swift4
+      output: Sources/Generated/R-Scenes.swift
