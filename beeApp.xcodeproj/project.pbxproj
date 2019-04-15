@@ -11,8 +11,8 @@
 		774155B5335E92F0D96AA38F /* libPods-beeAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C54AD0B0A1DCED8905E9A287 /* libPods-beeAppTests.a */; };
 		8F14FA3222641D43001CB214 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA3122641D43001CB214 /* Constants.swift */; };
 		8F14FA3722641D91001CB214 /* BeeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA3622641D91001CB214 /* BeeUtils.m */; };
-		8F14FA3F226423A7001CB214 /* R-Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA3D226423A7001CB214 /* R-Scenes.swift */; };
-		8F14FA40226423A7001CB214 /* R-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA3E226423A7001CB214 /* R-images.swift */; };
+		8F14FA47226425C8001CB214 /* R-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA45226425C8001CB214 /* R-images.swift */; };
+		8F14FA48226425C8001CB214 /* R-Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA46226425C8001CB214 /* R-Scenes.swift */; };
 		8F76D91022606B03000CA6F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76D90F22606B03000CA6F2 /* AppDelegate.swift */; };
 		8F76D91322606B0C000CA6F2 /* BeeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76D91222606B0C000CA6F2 /* BeeAppTests.swift */; };
 		8F76D91A22606B19000CA6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F76D91522606B19000CA6F2 /* Assets.xcassets */; };
@@ -37,8 +37,8 @@
 		8F14FA3522641D91001CB214 /* BeeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeeUtils.h; sourceTree = "<group>"; };
 		8F14FA3622641D91001CB214 /* BeeUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeeUtils.m; sourceTree = "<group>"; };
 		8F14FA3922641DE3001CB214 /* oc-swift-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "oc-swift-header.h"; sourceTree = "<group>"; };
-		8F14FA3D226423A7001CB214 /* R-Scenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "R-Scenes.swift"; path = "Sources/extension/R-Scenes.swift"; sourceTree = SOURCE_ROOT; };
-		8F14FA3E226423A7001CB214 /* R-images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "R-images.swift"; path = "Sources/extension/R-images.swift"; sourceTree = SOURCE_ROOT; };
+		8F14FA45226425C8001CB214 /* R-images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "R-images.swift"; sourceTree = "<group>"; };
+		8F14FA46226425C8001CB214 /* R-Scenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "R-Scenes.swift"; sourceTree = "<group>"; };
 		8F76D8EB226068BE000CA6F2 /* beeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F76D8FF226068C1000CA6F2 /* beeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F76D90F22606B03000CA6F2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,13 +108,13 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
-		8F14FA3C22642389001CB214 /* Generated */ = {
+		8F14FA3C22642389001CB214 /* generated */ = {
 			isa = PBXGroup;
 			children = (
-				8F14FA3E226423A7001CB214 /* R-images.swift */,
-				8F14FA3D226423A7001CB214 /* R-Scenes.swift */,
+				8F14FA45226425C8001CB214 /* R-images.swift */,
+				8F14FA46226425C8001CB214 /* R-Scenes.swift */,
 			);
-			path = Generated;
+			path = generated;
 			sourceTree = "<group>";
 		};
 		8F76D8E2226068BE000CA6F2 = {
@@ -141,7 +141,7 @@
 		8F76D90E22606B03000CA6F2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8F14FA3C22642389001CB214 /* Generated */,
+				8F14FA3C22642389001CB214 /* generated */,
 				8F14FA3B226422BD001CB214 /* extension */,
 				8F14FA3122641D43001CB214 /* Constants.swift */,
 				8F76D90F22606B03000CA6F2 /* AppDelegate.swift */,
@@ -402,10 +402,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F76D91022606B03000CA6F2 /* AppDelegate.swift in Sources */,
-				8F14FA3F226423A7001CB214 /* R-Scenes.swift in Sources */,
 				8F14FA3222641D43001CB214 /* Constants.swift in Sources */,
-				8F14FA40226423A7001CB214 /* R-images.swift in Sources */,
+				8F14FA47226425C8001CB214 /* R-images.swift in Sources */,
 				8F14FA3722641D91001CB214 /* BeeUtils.m in Sources */,
+				8F14FA48226425C8001CB214 /* R-Scenes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
