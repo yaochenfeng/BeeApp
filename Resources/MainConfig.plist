@@ -7,8 +7,6 @@
 	<key>url_action_response_middleware_list</key>
 	<array>
 		<dict>
-			<key>is_singleton</key>
-			<true/>
 			<key>frameworkName</key>
 			<string>beeApp</string>
 			<key>middleware</key>

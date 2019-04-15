@@ -43,6 +43,7 @@ class WebViewController: BaseViewController {
                 })
             }
         }).disposed(by: disposeBag)
+        self.webview.navigationDelegate = self
     }
     var reqURL: URL? {
         didSet {
@@ -56,6 +57,7 @@ class WebViewController: BaseViewController {
         let config = WKWebViewConfiguration()
         config.userContentController = userContent
         let web = WKWebView(frame: .zero, configuration: config)
+        web.allowsBackForwardNavigationGestures = true
         if #available(iOS 9.0, *) {
             //            web.customUserAgent = Constants.App.useragent
         } else {
@@ -68,4 +70,12 @@ class WebViewController: BaseViewController {
         prossview.progressTintColor = UIColor(hex: "#6ff3ff")
         return prossview
     }()
+}
+extension WebViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if navigationAction.request.url?.scheme == "tel" {
+            BHShareKit.shared().openURL(navigationAction.request.url, self)
+        }
+        decisionHandler(.allow)
+    }
 }

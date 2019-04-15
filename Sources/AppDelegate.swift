@@ -13,6 +13,7 @@ class AppDelegate: BHMainAppDelegate {
 
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        BHURLRouter.shared().addURLActionRequestMiddleware("URLRouterRewriteRequestMiddleware", isSingleton: true, frameworkName: "beeApp")
         super.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }

@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BeeUtils : NSObject
 +(NSString *)uuid;
++(void)show:(NSString *)msg;
 @end
 
 NS_ASSUME_NONNULL_END

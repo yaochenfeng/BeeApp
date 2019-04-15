@@ -8,8 +8,15 @@
 
 #import "BeeUtils.h"
 #import <Bugly/Bugly.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 @implementation BeeUtils
 +(NSString *)uuid{
     return [Bugly buglyDeviceId];
+}
++(void)show:(NSString *)msg{
+    UIView *supv =  [[UIApplication sharedApplication].windows lastObject];
+    MBProgressHUD *hub = [MBProgressHUD showHUDAddedTo:supv animated:true];
+    hub.label.text = msg;
+    [hub hideAnimated:true afterDelay:1];
 }
 @end

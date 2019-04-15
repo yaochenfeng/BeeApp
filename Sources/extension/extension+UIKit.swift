@@ -99,3 +99,10 @@ extension URL {
         return "\(self.scheme ?? "")://\(self.host ?? "")\(self.path)"
     }
 }
+extension BHShareKit {
+    func openURL(_ url: URL?, source: UIViewController? = nil, _ native: Any? = nil) {
+        if let urlStr = url?.absoluteString {
+            self.openURLString(urlStr, source: source, native: native)
+        }
+    }
+}

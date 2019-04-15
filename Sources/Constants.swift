@@ -20,4 +20,11 @@ struct Constants {
     static let deviceId: String = {
         return BeeUtils.uuid()
     }()
+    static let isSim: Bool = {
+        var isSim = false
+        #if arch(i386) || arch(x86_64)
+        isSim = true
+        #endif
+        return isSim
+    }()
 }

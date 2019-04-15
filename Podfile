@@ -11,6 +11,7 @@ def core
     pod 'MJRefresh'             #刷新
     pod 'FLEX', :configurations => ['Debug']
     pod 'BeeKit'                #核心bean、router管理
+    pod 'MBProgressHUD'
 end
 
 def swift_pods
