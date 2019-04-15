@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6A31D224D783E69DF079743B /* libPods-beeApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA767E5F203CC1279A82BF2 /* libPods-beeApp.a */; };
 		774155B5335E92F0D96AA38F /* libPods-beeAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C54AD0B0A1DCED8905E9A287 /* libPods-beeAppTests.a */; };
+		8F14FA3222641D43001CB214 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA3122641D43001CB214 /* Constants.swift */; };
+		8F14FA3722641D91001CB214 /* BeeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA3622641D91001CB214 /* BeeUtils.m */; };
 		8F76D91022606B03000CA6F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76D90F22606B03000CA6F2 /* AppDelegate.swift */; };
 		8F76D91322606B0C000CA6F2 /* BeeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76D91222606B0C000CA6F2 /* BeeAppTests.swift */; };
 		8F76D91A22606B19000CA6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F76D91522606B19000CA6F2 /* Assets.xcassets */; };
@@ -28,6 +30,11 @@
 
 /* Begin PBXFileReference section */
 		54ED3BC7D9B8DBAB5708A831 /* Pods-beeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeApp.debug.xcconfig"; path = "Target Support Files/Pods-beeApp/Pods-beeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8F14FA3122641D43001CB214 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8F14FA3422641D91001CB214 /* beeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beeApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		8F14FA3522641D91001CB214 /* BeeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeeUtils.h; sourceTree = "<group>"; };
+		8F14FA3622641D91001CB214 /* BeeUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeeUtils.m; sourceTree = "<group>"; };
+		8F14FA3922641DE3001CB214 /* oc-swift-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "oc-swift-header.h"; sourceTree = "<group>"; };
 		8F76D8EB226068BE000CA6F2 /* beeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F76D8FF226068C1000CA6F2 /* beeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F76D90F22606B03000CA6F2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +78,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F14FA3322641D70001CB214 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				8F14FA3422641D91001CB214 /* beeApp-Bridging-Header.h */,
+				8F14FA3822641D9F001CB214 /* utils */,
+				8F14FA3922641DE3001CB214 /* oc-swift-header.h */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		8F14FA3822641D9F001CB214 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				8F14FA3522641D91001CB214 /* BeeUtils.h */,
+				8F14FA3622641D91001CB214 /* BeeUtils.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		8F76D8E2226068BE000CA6F2 = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +121,9 @@
 		8F76D90E22606B03000CA6F2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8F14FA3122641D43001CB214 /* Constants.swift */,
 				8F76D90F22606B03000CA6F2 /* AppDelegate.swift */,
+				8F14FA3322641D70001CB214 /* objc */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -126,7 +154,6 @@
 				DD98582F5026F7A5D508F277 /* Pods-beeAppTests.debug.xcconfig */,
 				B2405D853C0E664BDDC9E3C0 /* Pods-beeAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -184,6 +211,7 @@
 				TargetAttributes = {
 					8F76D8EA226068BE000CA6F2 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					8F76D8FE226068C1000CA6F2 = {
 						CreatedOnToolsVersion = 10.2;
@@ -333,6 +361,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F76D91022606B03000CA6F2 /* AppDelegate.swift in Sources */,
+				8F14FA3222641D43001CB214 /* Constants.swift in Sources */,
+				8F14FA3722641D91001CB214 /* BeeUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +525,7 @@
 			baseConfigurationReference = 54ED3BC7D9B8DBAB5708A831 /* Pods-beeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YXV76JC9N9;
 				INFOPLIST_FILE = "$(PROJECT_FILE_PATH)/$(TARGET_NAME).plist";
@@ -504,6 +535,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jyc99.demo.BeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/objc/beeApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -514,6 +547,7 @@
 			baseConfigurationReference = E73434610D9DCC8E1FC2F129 /* Pods-beeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YXV76JC9N9;
 				INFOPLIST_FILE = "$(PROJECT_FILE_PATH)/$(TARGET_NAME).plist";
@@ -523,6 +557,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jyc99.demo.BeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/objc/beeApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
