@@ -141,9 +141,9 @@
 		8F14FA492264269B001CB214 /* url_resolver */ = {
 			isa = PBXGroup;
 			children = (
-				8F14FA5C22642F74001CB214 /* TabbarURLResolver.swift */,
-				8F14FA4A226426D4001CB214 /* ExceptionResponseMiddleware.swift */,
 				8F14FA5F22643182001CB214 /* URLRouterRewriteRequestMiddleware.swift */,
+				8F14FA4A226426D4001CB214 /* ExceptionResponseMiddleware.swift */,
+				8F14FA5C22642F74001CB214 /* TabbarURLResolver.swift */,
 				8F14FA6122644426001CB214 /* TelSchemeURLResolver.swift */,
 			);
 			path = url_resolver;
