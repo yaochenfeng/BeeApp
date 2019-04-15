@@ -1,0 +1,8 @@
+included:
+  - Sources/
+line_length: 200
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  # - Source/ExcludedFolder
+  # - Source/ExcludedFile.swift

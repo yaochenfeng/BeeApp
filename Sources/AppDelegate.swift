@@ -17,4 +17,3 @@ class AppDelegate: BHMainAppDelegate {
         return true
     }
 }
-

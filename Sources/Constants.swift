@@ -17,7 +17,7 @@ struct Constants {
     static let build:String = Bundle.main.infoDictionary!["CFBundleVersion"] as! String
     // swiftlint:enable colon force_cast
     /// 设备号
-    static let deviceId:String = {
+    static let deviceId: String = {
         return BeeUtils.uuid()
     }()
 }
