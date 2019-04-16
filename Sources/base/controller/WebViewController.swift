@@ -21,6 +21,9 @@ class WebViewController: BaseViewController {
         // Do any additional setup after loading the view.
         if self.reqURL?.host == "m.jyc99.com" {
             self.navigationController?.setNavigationBarHidden(true, animated: true)
+        } else {
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+            self.navigationController?.navigationBar.jycsetBackColor(gradient: [.red, .green])
         }
         self.view.addSubview([webview, progressView])
         webview.snp.makeConstraints { make in

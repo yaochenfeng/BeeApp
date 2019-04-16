@@ -23,6 +23,9 @@
 		8F14FA5D22642F74001CB214 /* TabbarURLResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA5C22642F74001CB214 /* TabbarURLResolver.swift */; };
 		8F14FA6022643182001CB214 /* URLRouterRewriteRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA5F22643182001CB214 /* URLRouterRewriteRequestMiddleware.swift */; };
 		8F14FA6222644426001CB214 /* TelSchemeURLResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA6122644426001CB214 /* TelSchemeURLResolver.swift */; };
+		8F14FA6722647E9E001CB214 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA6622647E9E001CB214 /* AppRouter.swift */; };
+		8F14FA6E226489FB001CB214 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA6D226489FB001CB214 /* AppNavigationController.swift */; };
+		8F14FA70226494FE001CB214 /* extension+nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14FA6F226494FE001CB214 /* extension+nav.swift */; };
 		8F76D91022606B03000CA6F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76D90F22606B03000CA6F2 /* AppDelegate.swift */; };
 		8F76D91322606B0C000CA6F2 /* BeeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76D91222606B0C000CA6F2 /* BeeAppTests.swift */; };
 		8F76D91A22606B19000CA6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F76D91522606B19000CA6F2 /* Assets.xcassets */; };
@@ -59,6 +62,9 @@
 		8F14FA5C22642F74001CB214 /* TabbarURLResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarURLResolver.swift; sourceTree = "<group>"; };
 		8F14FA5F22643182001CB214 /* URLRouterRewriteRequestMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRouterRewriteRequestMiddleware.swift; sourceTree = "<group>"; };
 		8F14FA6122644426001CB214 /* TelSchemeURLResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelSchemeURLResolver.swift; sourceTree = "<group>"; };
+		8F14FA6622647E9E001CB214 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		8F14FA6D226489FB001CB214 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		8F14FA6F226494FE001CB214 /* extension+nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+nav.swift"; sourceTree = "<group>"; };
 		8F76D8EB226068BE000CA6F2 /* beeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F76D8FF226068C1000CA6F2 /* beeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F76D90F22606B03000CA6F2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				8F14FA542264294A001CB214 /* extension+UIKit.swift */,
+				8F14FA6F226494FE001CB214 /* extension+nav.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -160,9 +167,10 @@
 		8F14FA4F226428B6001CB214 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				8F14FA5822642E4C001CB214 /* AppTabbarViewController.swift */,
+				8F14FA6D226489FB001CB214 /* AppNavigationController.swift */,
 				8F14FA52226428EB001CB214 /* BaseViewController.swift */,
 				8F14FA50226428D7001CB214 /* WebViewController.swift */,
-				8F14FA5822642E4C001CB214 /* AppTabbarViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 			children = (
 				8F14FA3122641D43001CB214 /* Constants.swift */,
 				8F76D90F22606B03000CA6F2 /* AppDelegate.swift */,
+				8F14FA6622647E9E001CB214 /* AppRouter.swift */,
 				8F14FA492264269B001CB214 /* url_resolver */,
 				8F14FA4E226428B0001CB214 /* base */,
 				8F14FA3322641D70001CB214 /* objc */,
@@ -245,8 +254,8 @@
 				8F76D8E7226068BE000CA6F2 /* Sources */,
 				8F76D8E8226068BE000CA6F2 /* Frameworks */,
 				8F76D8E9226068BE000CA6F2 /* Resources */,
-				A74584607EA0F8D0A1A998E6 /* [CP] Embed Pods Frameworks */,
 				E0218266E9C37ECCCFF8F438 /* [CP] Copy Pods Resources */,
+				A940D2329D4C254E9702FCC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,7 +409,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftgen >/dev/null; then\nswiftgen\nelse\necho \"warning: swiftgen not installed, download from homebrew\"\nfi\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		A74584607EA0F8D0A1A998E6 /* [CP] Embed Pods Frameworks */ = {
+		A940D2329D4C254E9702FCC1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -475,11 +484,14 @@
 				8F14FA3222641D43001CB214 /* Constants.swift in Sources */,
 				8F14FA4B226426D4001CB214 /* ExceptionResponseMiddleware.swift in Sources */,
 				8F14FA47226425C8001CB214 /* R-images.swift in Sources */,
+				8F14FA6722647E9E001CB214 /* AppRouter.swift in Sources */,
 				8F14FA5922642E4C001CB214 /* AppTabbarViewController.swift in Sources */,
 				8F14FA51226428D7001CB214 /* WebViewController.swift in Sources */,
 				8F14FA53226428EB001CB214 /* BaseViewController.swift in Sources */,
 				8F14FA5D22642F74001CB214 /* TabbarURLResolver.swift in Sources */,
+				8F14FA6E226489FB001CB214 /* AppNavigationController.swift in Sources */,
 				8F14FA6222644426001CB214 /* TelSchemeURLResolver.swift in Sources */,
+				8F14FA70226494FE001CB214 /* extension+nav.swift in Sources */,
 				8F14FA6022643182001CB214 /* URLRouterRewriteRequestMiddleware.swift in Sources */,
 				8F14FA552264294A001CB214 /* extension+UIKit.swift in Sources */,
 				8F14FA3722641D91001CB214 /* BeeUtils.m in Sources */,

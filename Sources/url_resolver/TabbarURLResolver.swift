@@ -10,7 +10,7 @@ import Foundation
 import BeeKit
 class TabbarURLResolver: NSObject, BHURLRouterHandlerProtocol {
     var tabbarvc: UITabBarController?
-    func handler(for request: BHURLActionRequest) -> Any {
+    func handler(for request: BHURLActionRequest) -> BHURLActionResponse {
         if tabbarvc == nil {
             tabbarvc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as? AppTabbarViewController
         }

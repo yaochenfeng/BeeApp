@@ -38,16 +38,16 @@ class AppTabbarViewController: UITabBarController {
     }
     /// 设置tabbar子控制器
     private func setupVCs(_ vcs: [UIViewController]) {
-        var navChid = [UINavigationController]()
+        var navChid = [AppNavigationController]()
         var childs = vcs
         if vcs.count == 0 {
             childs = self.children
         }
         for child in childs {
             if let nav  = child as? UINavigationController, let top = nav.children.first {
-                navChid.append(UINavigationController(rootViewController: top))
+                navChid.append(AppNavigationController(rootViewController: top))
             } else {
-                navChid.append(UINavigationController(rootViewController: child))
+                navChid.append(AppNavigationController(rootViewController: child))
             }
             navChid.last?.tabBarItem = child.tabBarItem
         }

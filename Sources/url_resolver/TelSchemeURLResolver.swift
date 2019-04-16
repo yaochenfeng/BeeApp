@@ -9,7 +9,7 @@
 import UIKit
 
 class TelSchemeURLResolver: NSObject, BHURLRouterHandlerProtocol {
-    func handler(for request: BHURLActionRequest) -> Any {
+    func handler(for request: BHURLActionRequest) -> BHURLActionResponse {
         DispatchQueue.main.async {
             if let resourceSpecifier = (request.url as NSURL).resourceSpecifier, let url = URL(string: "telprompt://\(resourceSpecifier)") {
                 if Constants.isSim {
