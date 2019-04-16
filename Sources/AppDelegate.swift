@@ -13,8 +13,7 @@ class AppDelegate: BHMainAppDelegate {
 
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        setupTheme();
-        BHURLRouter.shared().addURLActionRequestMiddleware("URLRouterRewriteRequestMiddleware", isSingleton: true, frameworkName: "beeApp")
+        setupTheme()
         super.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
@@ -24,7 +23,7 @@ class AppDelegate: BHMainAppDelegate {
             UITableView.appearance().sectionFooterHeight = 0
             UITableView.appearance().tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.1))
             //            UITableView.appearance().tableFooterView = UIView()
-            
+
         }
         if #available(iOS 11, *) {  // iOS 11 及其以上系统运行
             UIScrollView.appearance().contentInsetAdjustmentBehavior = .never

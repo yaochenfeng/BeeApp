@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>app://root/tab0</key>
+	<string>https://m.jyc99.com/</string>
+	<key>app://root/tab1</key>
+	<string>https://m.jyc99.com/product?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js</string>
+	<key>app://root/tab2</key>
+	<string>https://m.jyc99.com/discover</string>
+	<key>app://root/tab3</key>
+	<string>https://m.jyc99.com/mine</string>
+</dict>
+</plist>
